@@ -25,11 +25,12 @@ Test the app -> [Demo]()
 
 ## Things I reviewed
 
-* DOM Manipulation with jQuery 
+* Writing RESTful API
+* Express Middleware 
 * Templating with EJS
 * AJAX
 * Routing
-* Express Middleware
+* DOM Manipulation with jQuery 
 
 ## Author
 

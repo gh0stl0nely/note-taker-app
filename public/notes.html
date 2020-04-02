@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+    
+    <script src="./js/logic.js"></script>
+    <style>
+        textarea {
+            resize: none;
+            height: 300px;
+            border-style: none;
+            outline: none;
+            padding-left: 10px;
+            padding-top: 10px;
+            margin-top: 5px;
+
+        }
+    </style>
+    <title>Notes</title>
+</head>
+
+<body>
+    <nav class="green lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <ul id="slide-out" class="sidenav sidenav-fixed z-depth-4">
+                <li>
+                    <a id="add-note" style="width: 80%; margin-left: 28px;"
+                        class="btn waves-effect green lighten-1 z-depth-2">Add New Note
+                    </a>
+                </li>
+
+                <li style="text-align: center; font-size: 50px;"><a class="subheader">Notes</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <!-- <li class="note">
+                    <a>Ok
+                        <i class="material-icons right delete">delete</i>
+                    </a>
+                </li> -->
+            </ul>
+
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i style="font-size: 40px"
+                    class="large material-icons">border_color</i></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 l4"></div>
+
+            <div id="textarea" style="margin-top:40px; height: 450px;" class="col s12 m12 l8 lime lighten-5 z-depth-2">
+               
+                <div class="input-field">
+                        <input id="topic" style="text-align: center;" data-length="22">
+                        <!-- <label for="input_text">Input text</label> -->
+                </div>
+                <textarea placeholder="Enter your notes" id="user-notes" class="z-depth-2"></textarea>
+                <button id="save-note" style="width: 100%; margin-top: 5px;"
+                    class="btn waves-effect green lighten-1 z-depth-2">Save Note
+                    <!-- <i class="material-icons right">check</i> -->
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
