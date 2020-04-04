@@ -2,8 +2,6 @@
 
 A note taking application for user to write and keep track of their notes
 
-## Project Description
-
 ## Demo
 
 Test the app -> [Demo]()
