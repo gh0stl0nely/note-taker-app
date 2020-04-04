@@ -1,6 +1,6 @@
 # Note Taker Application
 
-A web application for user to write and keep track of their notes
+A note taking application for user to write and keep track of their notes
 
 ## Project Description
 
@@ -31,6 +31,7 @@ Test the app -> [Demo]()
 * AJAX
 * Routing
 * DOM Manipulation with jQuery 
+* Debouncing
 
 ## Author
 

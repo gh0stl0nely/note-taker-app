@@ -22,7 +22,7 @@
             margin-top: 5px;
         }
 
-        .toastStyle{
+        .toastStyle {
             background-color: green;
         }
     </style>
@@ -45,17 +45,36 @@
                 <li>
                     <div class="divider"></div>
                 </li>
-                <!-- <li class="note">
-                    <a>Ok
-                        <i class="material-icons right delete">delete</i>
-                    </a>
-                </li> -->
+               
+                <% Object.keys(parsedNotes).forEach((key) => { %>
+                    <li class="note" id="<%= key %>">
+                        <a><%= parsedNotes[key].topic %> 
+                            <i class="material-icons right delete">delete</i>
+                        </a>
+                    </li>
+                <% }) %>
             </ul>
 
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i style="font-size: 40px"
                     class="large material-icons">border_color</i></a>
         </div>
     </nav>
+
+
+    <div id="loader" style="position: fixed; top: 50%; left: 50%; font-size: 50px; visibility: hidden;"
+        class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-green-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -65,12 +84,11 @@
 
                 <div class="input-field">
                     <input id="topic" style="text-align: center;" data-length="22">
-                    <!-- <label for="input_text">Input text</label> -->
+                    <label for="input_text">Topic</label>
                 </div>
                 <textarea placeholder="Enter your notes" id="user-notes" class="z-depth-2"></textarea>
                 <button id="save-note" style="width: 100%; margin-top: 5px;"
-                    class="btn waves-effect green lighten-1 z-depth-2">Save Note
-                    <!-- <i class="material-icons right">check</i> -->
+                    class="btn waves-effect green lighten-1 z-depth-2">Save Note (Auto Save after 2 seconds)
                 </button>
             </div>
 

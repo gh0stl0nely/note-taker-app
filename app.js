@@ -3,7 +3,6 @@ const app = express()
 const util = require('util')
 const ejs = require('ejs')
 const fs = require('fs')
-const path = require('path')
 
 const readFilePromise = util.promisify(fs.readFile)
 const writeFilePromise = util.promisify(fs.writeFile)
@@ -20,10 +19,25 @@ app.get('/', (req, res) => {
 })
 
 //NOT DONE
-app.get('/notes', (req, res) => {
-    // WHEN GO HERE, we will read the file, use it in a template, and THEN serve it to them
-    res.sendFile(path.join(__dirname, '/public', '/notes.html'))
+app.get('/notes', renderTemplate, (req, res) => {
+    res.send(res.locals.html)
 })
+
+async function renderTemplate(req,res,next){
+    try {
+        const template = await readFilePromise('./views/notes.ejs', 'utf-8')
+        const notes = await readFilePromise('./db/db.json', 'utf-8')
+        const parsedNotes = JSON.parse(notes)
+
+        const html = ejs.render(template, {
+            parsedNotes : parsedNotes
+        })
+        res.locals.html = html
+        next()
+    }catch(e){
+        throw e
+    }
+}
 
 app.get('/api/notes/:id', findData , (req,res) => {
     if(!res.locals.requestedContent){
@@ -79,12 +93,10 @@ async function processRequest(req, res, next) {
 
         let database = await readFilePromise('./db/db.json')
         let updatedDatabase = JSON.parse(database)
-        console.log(updatedDatabase)
         updatedDatabase[id] = {
             topic,
             note
         }
-        console.log(updatedDatabase)
         await writeFilePromise('./db/db.json', JSON.stringify(updatedDatabase))
         next()
 
