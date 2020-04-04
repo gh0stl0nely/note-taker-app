@@ -4,7 +4,7 @@ A note taking application for user to write and keep track of their notes
 
 ## Demo
 
-Test the app -> [Demo]()
+Test the app -> [Demo](https://gh0stl0nely-note-taker-app.glitch.me/)
 
 ## GIF demonstration 
 
