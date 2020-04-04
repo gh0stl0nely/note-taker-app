@@ -131,8 +131,6 @@ $(document).ready(function () {
             clearTimeout(timer)
             deleteElement(currentItem)
         }
-
-
     })
 
     function saveInputFromSaveButton() {
