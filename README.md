@@ -10,7 +10,7 @@ Test the app -> [Demo]()
 
 ## GIF demonstration 
 
-<!-- ![Demo](./demo/start-app.gif) -->
+![Demo](./demo/start-app.gif)
 
 ## Built With
 
