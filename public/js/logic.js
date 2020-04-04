@@ -118,21 +118,18 @@ $(document).ready(function () {
         
         if (currentItem.hasClass('new-note')) {
             if (currentItem.hasClass('selected')) {
+                clearTimeout(timer)
                 currentItem.remove()
                 toggleTextarea()
             } else {
+                clearTimeout(timer)
                 currentItem.remove()
                 return;
             }
         } else {
             // Now to case that is not new         
-            if(currentItem.hasClass('selected')){
-                // If this is selected, delete it in BACKEND and toggle
-                deleteElement(currentItem)
-            } else {
-                // if this is not selected, delete it
-                deleteElement(currentItem)
-            }
+            clearTimeout(timer)
+            deleteElement(currentItem)
         }
 
 
