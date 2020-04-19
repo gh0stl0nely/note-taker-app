@@ -15,7 +15,7 @@ Test the app -> [Demo](https://gh0stl0nely-note-taker-app.glitch.me/)
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Used for template layout
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - Used for template styling
 * [Materialize](https://materializecss.com/) - CSS Library
-* [NodeJS](https://nodejs.org/en/) - Javascript runtime environment for this CLI application
+* [NodeJS](https://nodejs.org/en/) - Javascript runtime environment
 * [Express](https://expressjs.com/) - NodeJS framework for receiving and sending request with the front end
 * [NPM](https://www.npmjs.com/) - A tool for dependency management 
 * [EJS](https://ejs.co/) - Templating engine
